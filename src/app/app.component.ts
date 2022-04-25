@@ -12,6 +12,7 @@ import { EmployeeService } from './employee.service';
 export class AppComponent implements OnInit {
   public employees!: Employee[];
   public editEmployee: Employee|null = null;
+  public deleteEmployee: Employee | null = null;
 
   constructor(private employeeService: EmployeeService) {}
 
@@ -36,9 +37,11 @@ public onAddEmployee(addForm: NgForm): void {
     (response: Employee) => {
       console.log(response);
       this.getEmployees();
+      addForm.reset();
      },
     (error: HttpErrorResponse) => {
       alert(error.message);
+      addForm.reset();
       }
   );
 }
@@ -46,6 +49,18 @@ public onAddEmployee(addForm: NgForm): void {
 public onUpdateEmployee(employee: Employee): void {
   this.employeeService.addEmployee(employee).subscribe(
     (response: Employee) => {
+      console.log(response);
+      this.getEmployees();
+     },
+    (error: HttpErrorResponse) => {
+      alert(error.message);
+      }
+  );
+}
+
+public onDeleteEmployee(employeeId: number): void {
+  this.employeeService.deleteEmployee(employeeId).subscribe(
+    (response: void) => {
       console.log(response);
       this.getEmployees();
      },
@@ -72,6 +87,7 @@ const button = document.createElement('button');
 }
 
 if(mode === 'delete') {
+  this.deleteEmployee = employee;
   button.setAttribute('data-target', '#deleteEmployeeModal');
 }
   container?.appendChild(button);
