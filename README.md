@@ -13,7 +13,7 @@ A website using <a href="https://github.com/lazar360/employeemanager">Java Sprin
 
 <h2>Demo</h2>
 
-![EmployeeManager](https://user-images.githubusercontent.com/91179295/165251864-8a7ec801-1030-46a3-a4f6-901d0047efd4.gif)
+![employeemanager](https://user-images.githubusercontent.com/91179295/165254731-d9a41003-a018-4efb-b9ba-5ab12563b211.gif)
 
 <h2>Features</h2>
 This one single page website displays an employee manager.
