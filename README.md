@@ -9,8 +9,7 @@
 
 <h2>Introduction</h2>
 
-A website using Java Spring Boot for Back-End and Angular for Front-End.
-link to employeemanager java
+A website using <a href="https://github.com/lazar360/employeemanager">Java Spring Boot for Back-End</a> and Angular for Front-End.
 
 <h2>Demo</h2>
 
